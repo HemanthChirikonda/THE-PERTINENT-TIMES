@@ -83,14 +83,24 @@ return form;
     title.classList.add('titlecard')
     title.innerText= element.title;
     card.append(title);
-    let created_date= document.createElement('div');
-    created_date.classList.add('datecard')
-    created_date.innerText=  mlist[new Date(element.created_date).getMonth()]+'  '+new Date(element.created_date).getDate();
-    card.append(created_date);
+    let item_type= document.createElement('div');
+    item_type.classList.add('item_typecard')
+    item_type.innerText= element.item_type;
+    card.append(item_type);
+    
     let abstract= document.createElement('div');
     abstract.classList.add('abstractcard')
     abstract.innerText= element.abstract;
     card.append(abstract);
+
+    let byline= document.createElement('div');
+    byline.classList.add('bylinecard')
+    byline.innerText= element.byline;
+    card.append(byline);
+    let created_date= document.createElement('div');
+    created_date.classList.add('datecard')
+    created_date.innerText=  mlist[new Date(element.created_date).getMonth()]+'  '+new Date(element.created_date).getDate();
+    card.append(created_date);
     let a1= document.createElement('a');
     a1.href= element.short_url;
     let continueBtn= document.createElement('div');
